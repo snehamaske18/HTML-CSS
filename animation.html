@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            height: 400px;
+            width: 600px;
+            border: 1px solid;
+            margin: 100px auto;
+            animation-name: slider;
+            animation-duration: 30s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards; 
+        }
+        /* .child{
+            height: 200px;
+            width: 200px;
+            animation-name: slider;
+            animation-duration: 30s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            
+        } */
+        @keyframes slider {
+            10%{
+                background-image: url(./father-and-son-2258681_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation-fill-mode: forwards;
+                from{
+                    transform: left;
+                }
+                to{
+                    transform: left;
+                    width: 100%;
+                    animation-fill-mode: forwards;
+                }
+            }
+            20%{
+                background-image: url(./INDIA.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation-fill-mode: forwards;
+            }
+            30%{
+                background-image: url(./peacock-1144738_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            40%{
+                background-image: url(./mountains-100367_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            50%{
+                background-image: url(./ferris-wheel-4792152_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            60%{
+                background-image: url(./tulips-2068692_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            70%{
+                background-image: url(./pyrenees-351266_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            80%{
+                background-image: url(./tree-736885_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            90%{
+                background-image: url(./moon-1859616_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            100%{
+                background-image: url(./beach-1761410_640.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+        }
+    </style>
+</head>
+<body><div id="parent">
+    <div class="child" id="child1"></div>
+    <div class="child" id="child2"></div>
+    <div class="child" id="child3"></div>
+    </div>
+</body>
+</html>

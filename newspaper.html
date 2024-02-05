@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        .parent {
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            gap: 10px;
+            grid-template-areas: "header header header header header header"
+                "section1 section1 section1 section2 section2 section2"
+                "left1 main main main right1 right1"
+                "left1 main2 main2 main2 right2 right2"
+                "footer footer footer footer right2 right2";
+              
+        }
+        .block {
+             border: 1px solid;
+            font-size: 20px;
+            gap: 9px 25px;
+            text-align: justify;
+        }
+        #block1 {
+            grid-area: header;
+            text-align: start;
+        }
+        #block2 {
+            grid-area: section1;
+            display: grid;
+            grid-template-areas: "header header header header header"
+                "left1 main  main main right1"
+                "left1 footer footer footer right1";
+            border: 1px solid;
+        }
+        #block3 {
+            grid-area: section2;
+            display: grid;
+            grid-template-areas: "header header header"
+                "left1 right1 right1"
+                "left1 main right2";
+        }
+        #block4 {
+            grid-area: left1;
+            display: grid;
+            grid-template-areas: "header"
+                "main";
+        }
+        #block5 {
+            grid-area: main;
+            display: grid;
+            grid-template-areas: "header header header"
+                "left1 right1 right1"
+                "left1 main right2";
+        }
+        #block6 {
+            grid-area: right1;
+            display: grid;
+            grid-template-areas: "header header"
+                "left1 right1";
+        }
+        #block7 {
+            grid-area: main2;
+            display: grid;
+            grid-template-areas: "header main right1"
+                "left1 main right1"
+                "left1 footer right1";
+        }
+        #block8 {
+            grid-area: right2;
+            background-image: url(./ad.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #block9 {
+            grid-area: footer;
+            display: grid;
+            grid-template-areas: "header header header header header"
+                "left1 main main main right1"
+                "left1 main2 main3 main4 right1";
+        }
+        #hed1 {
+            height: 100px;
+            width: 60%;
+            margin: 0px 20% 3px 20%;
+            font-size: 110px;
+            font-weight: 900;
+            text-align: center;
+        }
+        .header2 {
+            width: 300px;
+            margin: auto;
+            height: 130px;
+            display: inline-block;
+            text-transform: uppercase;
+            padding: 10px;
+            vertical-align: top;
+        }
+        #hed2 {
+            margin-left: 100px;
+            background-color: skyblue;
+            color: white;
+        }
+        #hed3 {
+            background-color: wheat;
+            color: black;
+            margin-left: -5px;
+        }
+        #hed4 {
+            background-color: red;
+            color: white;
+            margin: 0px 50px 0px -5px;
+        }
+        .section1child {
+            margin-top: 0px;
+        }
+        #secchild1 {
+            grid-area: header;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        #secchild2 {
+            grid-area: left1;
+            grid-template-areas: "header header header"
+                "left1 right1 right1"
+                "left1 main right2";
+        }
+        #secchild3 {
+            grid-area: main;
+            background-image: url(./economy.png);
+            height: 300px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #secchild4 {
+            grid-area: right1;
+        }
+        #secchild5 {
+            grid-area: footer;
+        }
+        #sec2child1 {
+            grid-area: header;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        #sec2child2 {
+            grid-area: left1;
+        }
+        #sec2child3 {
+            grid-area: right1;
+            background-image: url(./dargiling.png);
+            height: 200px;
+        }
+        #sec2child4 {
+            grid-area: main;
+        }
+        #sec2child5 {
+            grid-area: right2;
+        }
+        #left1child1 {
+            grid-area: header;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        #left1child2 {
+            grid-area: main;
+        }
+        #main1child1 {
+            grid-area: header;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        #main1child2 {
+            grid-area: left1;
+        }
+        #main1child3 {
+            grid-area: right1;
+            background-image: url(./traincrush.png);
+            height: 200px;
+        }
+        #main1child4 {
+            grid-area: main;
+        }
+        #main1child5 {
+            grid-area: right2;
+        }
+        #right1child1 {
+            grid-area: header;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        #right1child2 {
+            grid-area: left1;
+        }
+        #right1child3 {
+            grid-area: right1;
+        }
+        #main2child1 {
+            grid-area: header;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        #main2child2 {
+            grid-area: main;
+            background-image: url(./markzugurburg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #main2child3 {
+            grid-area: right1;
+        }
+        #main2child4 {
+            grid-area: left1;
+        }
+        #main2child5 {
+            grid-area: footer;
+        }
+        #footchild1 {
+            grid-area: header;
+            text-align: center;
+            font-size: 60px;
+            font-weight: 600;
+        }
+        #footchild2 {
+            grid-area: left1;
+        }
+        #footchild3 {
+            grid-area: main;
+            background-image: url(./amirkhan.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        #footchild4 {
+            grid-area: right1;
+        }
+        #footchild5 {
+            grid-area: main2;
+        }
+        #footchild6 {
+            grid-area: main3;
+        }
+        #footchild7 {
+            grid-area: main4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent" id="parent">
+        <div class="block" id="block1">
+            <div class="header1" id="hed1">Times Of India</div>
+            <img src="./nirmala.png" alt="" height="145px" width="18%" style="margin-right: -110px;">
+
+            <div class="header2" id="hed2">FM Nirmala seeks Assessment of Full-year collection of GST before
+                rationalizing
+                rates 14 </div>
+            <div class="header2" id="hed3">us president hopeful tulsi gabbard wins push-up challenge 7</div>
+            <div class="header2" id="hed4">Virat says MSD is the coolest captain ever </div>
+            <img src="./dhonivirat.png" width="19%" height="145px" alt="" style="margin-left: -55px;">
+        </div>
+        <div class="block" id="block2">
+            <div class="section1child" id="secchild1">Economy Stares at crisis as rupee suffers wrost one-day fall of
+                142p</div>
+            <div class="section1child" id="secchild2">In a concerning turn of events, the economic landscape is
+                teetering on the edge as the Indian rupee witnessed its most significant one-day decline, plummeting by
+                142 points. Analysts and financial experts express deep apprehension over the potential ramifications
+                this sharp fall might have on the country's economic stability.Market analysts urge investors and
+                businesses to tread cautiously during these uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape.Market analysts urge investors and
+                businesses to tread cautiously during these uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape.to tread cautiously during these uncertain times, emphasizing the importance of adapting
+                strategies.</div>
+            <div class="section1child" id="secchild3"> </div>
+            <div class="section1child" id="secchild4">Government authorities and financial institutions are closely
+                monitoring the situation, exploring measures to mitigate the impact and stabilize the currency. The
+                central bank is expected to play a crucial role in implementing policies aimed at restoring confidence
+                in the market.As the nation grapples with this economic challenge, stakeholders are keenly watching
+                developments, hoping for swift and effective measures to steer the country away from a full-blown
+                crisishallenge, stakeholders are keenly watching
+                developments, hoping for swift and effective measures to steer the country away from a full-blown crisis.hoping for swift and effective measures to steer the country away from a full-blown crisis.
+            </div>
+            <div class="section1child" id="secchild5">Market analysts urge investors and businesses to tread cautiously
+                during these uncertain times, emphasizing the importance of adapting strategies to navigate the evolving
+                economic landscape. The government is expected to take proactive steps to address the root causes of the
+                rupee's fall and implement reforms to fortify the economy against further shocks.expected to take
+                proactive steps to address the root causes of the
+                rupee's fall and implement reforms to fortify the economy against further shocks.further shocks.expected
+                to take proactive steps to address the root causes of the
+                rupee's fall and implement reforms to fortify the economy against further shocks.the root causes of the
+                rupee's fall and implement reforms to fortify the economy against further shocks.</div>
+        </div>
+
+        <div class="block" id="block3">
+            <div class="section2child" id="sec2child1">Army Intelligence Detects Foreign Involvement in Darjeeling Stir
+            </div>
+            <div class="section2child" id="sec2child2">In a significant development, army intelligence has reported the
+                possibility of a foreign hand behind the ongoing unrest in Darjeeling. The region has been witnessing a
+                surge in protests and agitation, and security agencies are now intensifying their efforts to understand
+                the external factors contributing to the situation.n a significant development, army intelligence has
+                reported the
+                possibility of a foreign hand behind the ongoing unrest in Darjeeling. The region has been witnessing.
+                businesses to tread cautiously during these uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape businesses to tread cautiously during these
+                uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape
+            </div>
+            <div class="section2child" id="sec2child3"></div>
+            <div class="section2child" id="sec2child4">According to reliable sources within the army, there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged interference.businesses to tread cautiously
+                during these uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape businesses to tread cautiously during these
+                uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape businesses to tread cautiously during these
+                uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape</div>
+            <div class="section2child" id="sec2child5">Local authorities have acknowledged the complexity of the
+                situation and are collaborating with national security agencies to address the concerns raised by army
+                intelligence. The government is expected to take diplomatic measures to assess and counter any external
+                influence impacting the internal affairs of the region. businesses to tread cautiously during these
+                uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape</div>
+        </div>
+
+        <div class="block" id="block4">
+            <div class="left1child" id="left1child1">Pilibhit district gets ‘health ATMs’</div>
+            <div class="left1child" id="left1child2">According to reliable sources within the army, there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged According to reliable sources within the army,
+                there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged interferenceAccording to reliable sources within
+                the army, there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged interference ndications that certain elements
+                outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged According to reliable sources within the army,
+                there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged interferenceAccording to reliable sources within
+                the army, there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged interference ndications that certain elements
+                outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged According to reliable sources within the
+                army.ndications that certain elements outside the country might be fueling the unrest to create
+                instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged According to reliable sources within the army,
+                there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged interferenceAccording to reliable sources within
+                the army, there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged interference.the root causes of the
+                rupee's fall and implement reforms to fortify the economy against further shocks..the root causes of the
+                rupee's fall and implement reforms to fortify the economy against further shocks.</div>
+        </div>
+
+        <div class="block" id="block5">
+            <div class="main1child" id="main1child1">Train crushes 37 pilgrims in Bihar,many are injured
+            </div>
+            <div class="main1child" id="main1child2">In a significant development, army intelligence has reported the
+                possibility of a foreign hand behind the ongoing unrest in Darjeeling. The region has been witnessing a
+                surge in protests and agitation, and security agencies are now intensifying their efforts to understand
+                the external factors contributing to the situation.n a significant development, army intelligence has
+                reported the
+                possibility of a foreign hand behind the ongoing unrest in Darjeeling. The region has been witnessing.
+                urge in protests and agitation, and security agencies are now intensifying their efforts to understand
+                the external factors contributing to the situation.n a significant development, army intelligence has
+                reported the
+                possibility of a foreign hand behind the ongoing unrest in Darjeeling. The region has been witnessing.
+            </div>
+            <div class="main1child" id="main1child3"></div>
+            <div class="main1child" id="main1child4">According to reliable sources within the army, there are
+                indications that certain elements outside the country might be fueling the unrest to create instability
+                in the region. The nature of their involvement is still under investigation, and intelligence agencies
+                are working to identify the motives behind this alleged interference.urge in protests and agitation, and
+                security agencies are now intensifying their efforts to understand
+                the external factors contributing to the situation.n a significant development, army intelligence has
+                reported the the root causes of the
+                rupee's fall and implement reforms to fortify the economy against further shocks.
+                possibility of a foreign hand behind the ongoing unrest in Darjeeling. The region has been witnessing.
+            </div>
+            <div class="main1child" id="main1child5">Local authorities have acknowledged the complexity of the
+                situation and are collaborating with national security agencies to address the concerns raised by army
+                intelligence. The government is expected to take diplomatic measures to assess and counter any external
+                influence impacting the internal affairs of the region.urge in protests and agitation, and security
+                agencies are now intensifying their efforts to understand
+                the external factors contributing to the situation.n a significant development, army intelligence has
+                reported the
+                possibility of a foreign hand behind the ongoing unrest in Darjeeling. The region has been witnessing.
+            </div>
+        </div>
+        <div class="block" id="block6">
+            <div class="right1child" id="right1child1">UGC approves guidelines for short-term skill development </div>
+            <div class="right1child" id="right1child2">In a concerning turn of events, the economic landscape is
+                teetering on the edge as the Indian rupee witnessed its most significant one-day decline, plummeting by
+                142 points. Analysts and financial experts express deep apprehension over the potential ramifications
+                this sharp fall might have on the country's economic stability.Market analysts urge investors and
+                businesses to tread cautiously during these uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape.Market analysts urge investors and
+                businesses to tread cautiously during these uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape. businesses to tread cautiously during these
+                uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscapebusinesses to tread cautiously during these
+                uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape. the root causes of the
+                rupee's fall and implement reforms to fortify the economy against further shocks.the root causes of the
+                rupee's.</div>
+            <div class="right1child" id="right1child3">In a concerning turn of events, the economic landscape is
+                teetering on the edge as the <img src="./ugc.png" alt="" height="100px" width="100px">Indian rupee
+                witnessed its most significant one-day decline, plummeting by
+                142 points. Analysts and financial experts
+                express deep apprehension over the potential ramifications
+                this sharp fall might have on the country's economic stability.Market analysts urge investors and
+                businesses to tread cautiously during these uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape.Market analysts urge investors and
+                businesses to tread cautiously during these uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape.businesses to tread cautiously during these
+                uncertain times, emphasizing the importance of adapting
+                strategies to navigate the evolving economic landscape</div>
+        </div>
+        <div class="block" id="block7">
+            <div class="main2child" id="main2child1">Mark Zuckerberg announces some updates in FaceBook</div>
+            <div class="main2child" id="main2child2"></div>
+            <div class="main2child" id="main2child3">named Zuckerberg one of the most influential people in the world in
+                2008, 2011, 2016 and 2019, and nominated him as a finalist several other times. He was named the Time
+                Person of the Year in 2010, the same year when Facebook eclipsed more than half a billion
+                users.[3][4][5] In December 2016, Zuckerberg was ranked tenth on the Forbes list of the World's Most
+                Powerful People.[6] In the Forbes 400 list of wealthiest Americans in 2023, he was ranked eighth with a
+                personal wealth of $106 billion.[7] As of December 2023, Zuckerberg's net worth was estimated at $115
+                billion by Forbes, making him the seventh richest person in the world.[8] A film depicting Zuckerberg's
+                early career, legal troubles and initial success with the site</div>
+            <div class="main2child" id="main2child4">named Zuckerberg one of the most influential people in the world in
+                2008, 2011, 2016 and 2019, and nominated him as a finalist several other times. He was named the Time
+                Person of the Year in 2010, the same year when Facebook eclipsed more than half a billion
+                users.[3][4][5] In December 2016, Zuckerberg was ranked tenth on the Forbes list of the World's Most
+                Powerful People.[6] In the Forbes 400 list of wealthiest Americans in 2023, he was ranked eighth with a
+                personal wealth of $106 billion.[7] As of December 2023, Zuckerberg's net worth was estimated at $115
+                billion by Forbes, making him the seventh richest person in the world.[8] A film depicting Zuckerberg's
+                early career, legal troubles and initial success with the site.r when Facebook eclipsed more than half a
+                billion
+                users.[3][4][5] In December 2016, Zuckerberg was ranked tenth on the Forbes list of the World's Most
+                Powerful People.[6] In the Forbes 400 list of wealthiest Americans in 2023..</div>
+            <div class="main2child" id="main2child5">named Zuckerberg one of the most influential people in the world in
+                2008, 2011, 2016 and 2019, and nominated him as a finalist several other times. He was named the Time
+                Person of the Year in 2010, the same year when Facebook eclipsed more than half a billion
+                users.[3][4][5] In December 2016, Zuckerberg was ranked tenth on the Forbes list of the World's Most
+                Powerful People.[6] In the Forbes 400 list of wealthiest Americans in 2023.r when Facebook eclipsed more
+                than half a billion
+                .</div>
+        </div>
+        <div class="block" id="block8"></div>
+
+        <div class="block" id="block9">
+            <div class="footerchild" id="footchild1">"HELLO I'M AMIR" Star call-up</div>
+            <div class="footerchild" id="footchild2">Amir Khan has faced several high-profile opponents throughout his
+                career, including fights against boxers like Marco Antonio Barrera, Paulie Malignaggi, Zab Judah, Danny
+                Garcia, and Canelo Alvarez. Outside of boxing, Khan has also been involved in philanthropy and has
+                appeared in television shows, including the reality series organizations focused on helping
+                underprivileged children.
+                Outside of boxing, he has ventured into business and has been associated with ventures such as
+                restaurant ownership."organizations focused on helping underprivileged children.
+                Outside of boxing.
+            </div>
+            <div class="footerchild" id="footchild3"></div>
+            <div class="footerchild" id="footchild4">Amir Khan has faced several high-profile opponents throughout his
+                career, including fights against boxers like Marco Antonio Barrera, Paulie Malignaggi, Zab Judah, Danny
+                Garcia, and Canelo Alvarez. Outside of boxing, Khan has also been involved in philanthropy and has
+                appeared in television shows, including the reality series organizations focused on helping
+                underprivileged children.
+                Outside of boxing, he has ventured into business and has been associated with ventures such as
+                restaurant ownership.organizations focused on helping underprivileged children.
+            </div>
+            <div class="footerchild" id="footchild5">Amir Khan has faced several high-profile opponents throughout his
+                career, including fights against boxers like
+            </div>
+            <div class="footerchild" id="footchild6">Amir Khan has faced several high-profile opponents throughout his
+                career, including fights against boxers like
+            </div>
+            <div class="footerchild" id="footchild7">Amir Khan has faced several high-profile opponents throughout his
+                career, including fights against boxers like
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

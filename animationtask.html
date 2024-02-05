@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ul{
+            border-bottom: 1px solid palevioletred;
+            margin: 200px auto;
+            width: 400px;
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            animation-name: ball;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        .li{
+            height: 60px;
+            width: 60px;
+            border: 1px solid;
+            border-radius: 50%;
+            position: relative;
+            animation-name: ball;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            
+        }
+        @keyframes ball {
+            from{
+                top: 3px;
+                transform: rotate(360deg);
+            }
+            to{
+                bottom: 20px;
+            }
+            
+        }
+        #li1{
+            background-image: linear-gradient(yellow,rgb(83, 220, 220));
+            animation-timing-function: linear;
+        }
+        #li2{
+            background-image: linear-gradient(purple,red);
+            animation-timing-function: ease;
+        }
+        #li3{
+            background-image: linear-gradient(violet,aqua);
+            animation-timing-function: ease-out;
+        }
+        #li4{
+            background-image: linear-gradient(indigo,rgb(238, 69, 97));
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <ul class="ul">
+        <li class="li" id="li1"></li>
+        <li class="li" id="li2"></li>
+        <li class="li" id="li3"></li>
+        <li class="li" id="li4"></li> 
+    </ul>
+</body>
+</html>

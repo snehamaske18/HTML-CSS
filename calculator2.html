@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        #frame {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #input {
+            width: 200px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .number {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            margin-top: 10px;
+        }
+
+        .child {
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="frame">
+        <div id="input"><input type="text" id="display" readonly></div>
+        <div class="number">
+            <div class="child" onclick="getClear()">C</div>
+            <div class="child" onclick="getClear()">←</div>
+            <div class="child" onclick="append('%')">%</div>
+            <div class="child" onclick="append('/')">/</div>
+            <div class="child" onclick="append('7')">7</div>
+            <div class="child" onclick="append('8')">8</div>
+            <div class="child" onclick="append('9')">9</div>
+            <div class="child" onclick="append('*')">*</div>
+            <div class="child" onclick="append('4')">4</div>
+            <div class="child" onclick="append('5')">5</div>
+            <div class="child" onclick="append('6')">6</div>
+            <div class="child" onclick="append('-')">-</div>
+            <div class="child" onclick="append('1')">1</div>
+            <div class="child" onclick="append('2')">2</div>
+            <div class="child" onclick="append('3')">3</div>
+            <div class="child" onclick="append('+')">+</div>
+            <div class="child" onclick="append('#')">⌫</div>
+            <div class="child" onclick="append('0')">0</div>
+            <div class="child" onclick="append('.')">.</div>
+            <div class="child" onclick="getEqual()">=</div>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+        let currentInput = "";
+
+        function updateDisplay() {
+            display.value = currentInput;
+        }
+
+        function append(value) {
+            currentInput += value;
+            updateDisplay();
+        }
+
+        function getEqual() {
+            try {
+                currentInput = eval(currentInput).toString();
+                updateDisplay();
+            } catch (error) {
+                display.value = "Error";
+                setTimeout(getClear, 1000);
+            }
+        }
+
+        function getClear() {
+            currentInput = "";
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>

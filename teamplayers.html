@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            height: 1200px;
+            width: 1100px;
+            border: 1px solid;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            background-image: linear-gradient(rgb(125, 125, 236), rgb(124, 124, 244));
+        }
+
+        .child {
+            height: 250px;
+            width: 310px;
+            /* border: 1px solid; */
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            align-items: center;
+            background-image: linear-gradient(rgb(105, 105, 244), white, rgb(108, 108, 244))
+        }
+
+        .img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+           
+        }
+        #img1 {
+            background-image: url(./Rohit\ sharma.png);
+        }
+        #img2 {
+            background-image: url(./virat\ kohali.png);
+        }
+        #img3 {
+            background-image: url(./KL\ Rahul.png);
+        }
+        #img4 {
+            background-image: url(./S.gill.png);
+        }
+        #img5 {
+            background-image: url(./S.Iyyer.png);
+        }
+        #img6{
+            background-image: url(./S.yadav.png);
+        }
+        #img7 {
+            background-image: url(./R.jadeja.png);
+        }
+        #img8{
+            background-image: url(./M.Shammi.png);
+        }
+        #img9 {
+            background-image: url(./J.Bumrah.png);
+        }
+        #img10{
+            background-image: url(./M.Siraj.png);
+        }
+        #img11{
+            background-image: url(./k.yadav.png);
+        }
+
+        .detail {
+            margin-top: 10px;
+            color: white;
+            width: 100%;
+            text-align: center;
+            font-weight: 60px;
+        }
+
+        summary {
+            margin-bottom: 5px;
+            font-size: 15px;
+            line-height: 10px;
+        }
+
+        .name {
+            background-color:rgb(175, 113, 233);
+            color: white;
+            margin-bottom: 0px;
+        }
+
+        .batsman {
+            background-color: whitesmoke;
+            margin-top: 0px;
+            color: black;
+        }
+
+        details {
+            background-image: linear-gradient(rgb(109, 109, 236),rgb(160, 155, 155),rgb(115, 115, 240));
+            color: black;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Playing XI</h1>
+    <div class="parent" id="paren1">
+        <div class="child" id="child1">
+            <div class="img" id="img1"></div>
+            <div class="detail" id="detail1">
+                <div class="name">Rohit Sharma <sup>(C)</sup></div>
+                <div class="batsman">Batsman<br></div>
+                <div>
+                    <details>
+                        <summary>Career</summary>
+                        <table border="1px solid">
+                            <thead>
+                                <tr>
+                                    <td>SR.NO</td>
+                                    <td>FORMAT</td>
+                                    <td>MATCHES</td>
+                                    <td>RUNS</td>
+                                    <td>100's</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Tests</td>
+                                    <td>52</td>
+                                    <td>3677</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>ODIs</td>
+                                    <td>262</td>
+                                    <td>10709</td>
+                                    <td>31</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>T20s</td>
+                                    <td>148</td>
+                                    <td>3853</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="child" id="child2">
+            <div class="img" id="img2"></div>
+            
+            <div class="detail" id="detail2"> <div class="name">Virat Kohali</div>
+            <div class="batsman">Batsman<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>RUNS</td>
+                                <td>100's</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>111</td>
+                                <td>8676</td>
+                                <td>29</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>292</td>
+                                <td>13848</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>115</td>
+                                <td>4008</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child3">
+            <div class="img" id="img3"></div>
+            <div class="detail" id="detail3"> <div class="name">KL Rahul<sup>(wk)</sup></div>
+            <div class="batsman">Batsman<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>RUNS</td>
+                                <td>100's</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>47</td>
+                                <td>2642</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>72</td>
+                                <td>2743</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>72</td>
+                                <td>2665</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child4">
+            <div class="img" id="img4"></div>
+            <div class="detail" id="detail4"> <div class="name">Shubhman Gill</div>
+            <div class="batsman">Batsman<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>RUNS</td>
+                                <td>100's</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>18</td>
+                                <td>966</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>44</td>
+                                <td>2271</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>11</td>
+                                <td>304</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child5">
+            <div class="img" id="img5"></div>
+            <div class="detail" id="detail5"> <div class="name">Shreyash Iyyer</div>
+            <div class="batsman">Batsman<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>RUNS</td>
+                                <td>100's</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>10</td>
+                                <td>666</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>58</td>
+                                <td>2331</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>49</td>
+                                <td>1043</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child6">
+            <div class="img" id="img6"></div>
+            <div class="detail" id="detail6"> <div class="name">Suryakumar Yadav</div>
+            <div class="batsman">Batsman<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>RUNS</td>
+                                <td>100's</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>1</td>
+                                <td>8</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>37</td>
+                                <td>773</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>56</td>
+                                <td>1979</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child7">
+            <div class="img" id="img7"></div>
+            <div class="detail" id="detail7"> <div class="name">Ravindra Jadeja</div>
+            <div class="batsman">All Rounder<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>RUNS</td>
+                                <td>100's</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>67</td>
+                                <td>2804</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>197</td>
+                                <td>2756</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>64</td>
+                                <td>457</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child8">
+            <div class="img" id="img8"></div>
+            <div class="detail" id="detail8"> <div class="name">Mohhamad Shammi</div>
+            <div class="batsman">Bowler<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>Wickets</td>
+                                <td>Economy</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>64</td>
+                                <td>229</td>
+                                <td>3.30</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>101</td>
+                                <td>195</td>
+                                <td>5.55</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>8.94</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child9">
+            <div class="img" id="img9"></div>
+            <div class="detail" id="detail9"> <div class="name">Jaspreet Bumrah</div>
+            <div class="batsman">Bowler<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>Wickets</td>
+                                <td>Economy</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>30</td>
+                                <td>128</td>
+                                <td>2.69</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>89</td>
+                                <td>149</td>
+                                <td>4.59</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>62</td>
+                                <td>72</td>
+                                <td>6.55</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child10">
+            <div class="img" id="img10"></div>
+            <div class="detail" id="detail10"> <div class="name">Mohhmad Siraj</div>
+            <div class="batsman">Bowler<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>Wickets</td>
+                                <td>Economy</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>21</td>
+                                <td>59</td>
+                                <td>3.26</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>41</td>
+                                <td>68</td>
+                                <td>5.09</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>8</td>
+                                <td>11</td>
+                                <td>9.18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+        <div class="child" id="child11">
+            <div class="img" id="img11"></div>
+            <div class="detail" id="detail11"> <div class="name">Kuldeep Yadav</div>
+            <div class="batsman">Bowler<br></div>
+            <div>
+                <details>
+                    <summary>Career</summary>
+                    <table border="1px solid">
+                        <thead>
+                            <tr>
+                                <td>SR.NO</td>
+                                <td>FORMAT</td>
+                                <td>MATCHES</td>
+                                <td>Wickets</td>
+                                <td>Economy</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tests</td>
+                                <td>8</td>
+                                <td>34</td>
+                                <td>3.43</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ODIs</td>
+                                <td>101</td>
+                                <td>167</td>
+                                <td>5.05</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>T20s</td>
+                                <td>32</td>
+                                <td>52</td>
+                                <td>6.62</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div></div>
+        </div>
+    </div>
+</body>
+
+</html>
